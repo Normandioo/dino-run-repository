@@ -43,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ostrich with its head down_0
+      name: playerCrouching0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,13 +141,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ostrich with its head down_1
+      name: playerCrouching1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 66
-        height: 26
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,13 +163,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ostrich with its head down_2
+      name: playerCrouching2
       rect:
         serializedVersion: 2
-        x: 95
+        x: 64
         y: 0
-        width: 33
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,6 +180,28 @@ TextureImporter:
       bones: []
       spriteID: eda50d3b270b0e4d0800000000000000
       internalID: -3107289736196105506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playerCrouching3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6251ce8f582bf024aaaffc6f4bbea388
+      internalID: 333951157
       vertices: []
       indices: 
       edges: []
@@ -196,11 +218,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Ostrich with its head down_0: 8667171607448468788
-      Ostrich with its head down_1: -2273059209836360593
-      Ostrich with its head down_2: -3107289736196105506
+      playerCrouching0: 8667171607448468788
+      playerCrouching1: -2273059209836360593
+      playerCrouching2: -3107289736196105506
+      playerCrouching3: 333951157
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
