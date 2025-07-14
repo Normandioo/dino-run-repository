@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -73,7 +73,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OstrichDeath_0
+      name: playerDeath0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 27
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,13 +162,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_1
+      name: playerDeath1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 32
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,13 +184,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_2
+      name: playerDeath2
       rect:
         serializedVersion: 2
-        x: 63
+        x: 64
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,13 +206,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_3
+      name: playerDeath3
       rect:
         serializedVersion: 2
-        x: 95
+        x: 96
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,13 +228,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_4
+      name: playerDeath4
       rect:
         serializedVersion: 2
-        x: 127
+        x: 128
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,13 +250,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_5
+      name: playerDeath5
       rect:
         serializedVersion: 2
-        x: 159
+        x: 160
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,13 +272,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_6
+      name: playerDeath6
       rect:
         serializedVersion: 2
-        x: 193
+        x: 194
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,13 +294,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_7
+      name: playerDeath7
       rect:
         serializedVersion: 2
-        x: 225
+        x: 226
         y: 0
-        width: 28
-        height: 32
+        width: 26
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,13 +316,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_8
+      name: playerDeath8
       rect:
         serializedVersion: 2
-        x: 257
+        x: 258
         y: 0
-        width: 32
-        height: 23
+        width: 30
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,13 +338,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OstrichDeath_9
+      name: playerDeath9
       rect:
         serializedVersion: 2
-        x: 289
+        x: 290
         y: 0
-        width: 31
-        height: 23
+        width: 30
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,18 +371,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      OstrichDeath_0: 8622029695282365805
-      OstrichDeath_1: -7722933798842445317
-      OstrichDeath_2: -4499414352090354013
-      OstrichDeath_3: -3679067090008939673
-      OstrichDeath_4: -7953317848387040123
-      OstrichDeath_5: -4760357910308873972
-      OstrichDeath_6: 5238439574604948471
-      OstrichDeath_7: 4449357224153588228
-      OstrichDeath_8: -3200970091404703420
-      OstrichDeath_9: -5923831307693630270
+      playerDeath0: 8622029695282365805
+      playerDeath1: -7722933798842445317
+      playerDeath2: -4499414352090354013
+      playerDeath3: -3679067090008939673
+      playerDeath4: -7953317848387040123
+      playerDeath5: -4760357910308873972
+      playerDeath6: 5238439574604948471
+      playerDeath7: 4449357224153588228
+      playerDeath8: -3200970091404703420
+      playerDeath9: -5923831307693630270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
