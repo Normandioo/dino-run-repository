@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c43663492dd5b8644bc7507a199d95d1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _rock1: {fileID: 2306451636208605726, guid: 68c5fa60b7168444696c717dd7ffe391, type: 3}
+  - _rock2: {fileID: 6032601928382320259, guid: 80dcba1d31f724244b4be3d402f3a071, type: 3}
+  - _tree1: {fileID: 5583517738338190565, guid: 6a1a6b951a898a44a9e62bab2d39bca2, type: 3}
+  - _tree2: {fileID: 4972349364189985282, guid: 88982971a9494ab4e91ac9213fcd6245, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
