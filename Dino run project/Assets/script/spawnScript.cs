@@ -29,23 +29,9 @@ public class spawnScript : MonoBehaviour
 
     private void Spawn()
     {
-       int index = Random.Range(0, obstacles.Length); // índice aleatório
-        Vector3 pos = transform.position;
-
-        if (index > 1)
-        {
-            pos.y = -2.19f; // objetos 2 e 3 (índices 2,3)
-        }
-        else if (index == 1)
-        {
-            pos.y = -2.19f; // objetos 0 e 1
-        }
-        else if (index == 0)
-        {
-            pos.y = -2.75f;
-        }
-
-        Instantiate(obstacles[index], pos, transform.rotation);
+        int index = Random.Range(0, obstacles.Length);
+    
+        Instantiate(obstacles[index], transform.position, transform.rotation);
     }
 }
 
