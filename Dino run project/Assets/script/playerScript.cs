@@ -83,18 +83,6 @@ public class playerScript : MonoBehaviour
             _grounded = false;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("scoring"))
-        {
-            FindFirstObjectByType<GameManager>().IncreaseScore();
-        }
-        else if (other.gameObject.CompareTag("obstacle"))
-        {
-           
-        }
-    }
     
 }
 
