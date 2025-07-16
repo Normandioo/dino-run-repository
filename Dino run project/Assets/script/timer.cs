@@ -19,16 +19,16 @@ public class timer : MonoBehaviour
             // Verifica se o tempo necessário (0.1 segundos) já passou
             if (timerToIncreaseScore >= 0.1f)
             {
-                score += 1; // Aumenta o score em 1
+                score += 1; //sums 1 to score
                 timerText.text = score.ToString(); // Atualiza o texto na UI
 
-                // Reseta o contador para o próximo incremento
+                // resets the counter
                 timerToIncreaseScore = 0f;
             }
         }
     }
 
-    // Métodos para controle (opcional, mas útil)
+
     public void StopScore()
     {
         isRunning = false;
