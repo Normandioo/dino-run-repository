@@ -40,30 +40,25 @@ public class playerScript : MonoBehaviour
             _jump = true;
         }
 
-        
+
 
     }
     //called each 0.02 seconds
     private void FixedUpdate()
     {
-        bool crouchNow = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Mouse1);
-        if(crouchNow != _isCrouching)
-        {
-             _isCrouching = crouchNow;
-             _animator.SetBool("isCrouching", _isCrouching);
-         }
-        if (!_grounded)
-        {
-            _animator.Play("playerJump");
-        }
-        else if (!_isCrouching)
-        {
-            _animator.Play("playerRun");
-        }
-    
-        if (_jump == true && _grounded == true)
-        {
 
+        _isCrouching = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Mouse1);
+        _animator.SetBool("isCrouching", _isCrouching);
+
+        // Animações de pulo e corrida
+        if (!_grounded)
+            _animator.Play("playerJump");
+        else if (!_isCrouching)
+            _animator.Play("playerRun");
+
+        // Pulo
+        if (_jump && _grounded)
+        {
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             _grounded = false;
             _jump = false;
@@ -82,18 +77,28 @@ public class playerScript : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other)
     {
         //if the gameObject tag is "ground"
-        if (other.gameObject.CompareTag("ground"))
+        if (other.gameObject.CompareTag("obstacle"))
         {
             //sets _grounded to false
             _grounded = false;
         }
     }
 
-    private void crouch()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.CompareTag("scoring"))
+        {
+            FindFirstObjectByType<GameManager>().IncreaseScore();
+        }
+        else if (other.gameObject.CompareTag("obstacle"))
+        {
+           
+        }
     }
     
-
 }
+
+
+
+
 

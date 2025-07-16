@@ -8,7 +8,7 @@ public class spawnScript : MonoBehaviour
     [SerializeField] GameObject _tree1;
     [SerializeField] GameObject _tree2;
 
-    public float SpawnRate = 1f;
+    public float SpawnRate = 2f;
 
     public GameObject[] obstacles;
 
