@@ -1,12 +1,15 @@
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class spawnScript : MonoBehaviour
 {
-     [SerializeField] GameObject _rock1;
+    [SerializeField] GameObject _rock1;
     [SerializeField] GameObject _rock2;
     [SerializeField] GameObject _tree1;
     [SerializeField] GameObject _tree2;
+
 
     public float SpawnRate = 2f;
 
@@ -15,8 +18,9 @@ public class spawnScript : MonoBehaviour
     void Awake()
     {
         obstacles = new GameObject[] { _rock1, _rock2, _tree1, _tree2 };
+
     }
-    
+
     void OnEnable()
     {
         InvokeRepeating(nameof(Spawn), SpawnRate, SpawnRate);
@@ -30,9 +34,8 @@ public class spawnScript : MonoBehaviour
     private void Spawn()
     {
         int index = Random.Range(0, obstacles.Length);
-    
+
         Instantiate(obstacles[index], transform.position, transform.rotation);
     }
 }
-
 

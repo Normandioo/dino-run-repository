@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6576734889536722896}
   m_Layer: 0
   m_Name: rock1
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7494113234682047914}
   - component: {fileID: 2811007793263215116}
-  - component: {fileID: 4154194887500213022}
+  - component: {fileID: 694082157423623408}
   m_Layer: 0
   m_Name: body
   m_TagString: obstacle
@@ -134,7 +134,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4154194887500213022
+--- !u!61 &694082157423623408
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -4,10 +4,11 @@ using TMPro;
 public class timer : MonoBehaviour
 {
     public TMP_Text timerText;
-    private int score = 0;
-    public bool isRunning = true;
-
+    public int score = 0;
+    public bool isRunning;
     private float timerToIncreaseScore = 0f;
+    
+
 
     void Update()
     {
@@ -20,6 +21,7 @@ public class timer : MonoBehaviour
             if (timerToIncreaseScore >= 0.1f)
             {
                 score += 1; //sums 1 to score
+               
                 timerText.text = score.ToString(); // Atualiza o texto na UI
 
                 // resets the counter
@@ -28,22 +30,28 @@ public class timer : MonoBehaviour
         }
     }
 
+    public void OnEnable()
+    {
+        
+        isRunning = true;
+    }
 
-    public void StopScore()
+    void OnDisable()
     {
         isRunning = false;
     }
 
-    public void StartScore()
-    {
-        isRunning = true;
-    }
 
-    public void ResetScore()
+    public void StopScore()
     {
+        isRunning = false;
         score = 0;
         timerToIncreaseScore = 0f;
         timerText.text = score.ToString();
     }
 
-}
+
+    }
+
+
+
