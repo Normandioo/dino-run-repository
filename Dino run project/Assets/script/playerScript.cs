@@ -24,33 +24,12 @@ public class playerScript : MonoBehaviour
 
     private void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            _jump = true;
-        }
-
+        keyboardInputs();
     }
 
     private void FixedUpdate()
     {
-
-        _isCrouching = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Mouse1);
-        _animator.SetBool("isCrouching", _isCrouching);
-
         
-        if (!_grounded)
-            _animator.Play("playerJump");
-        else if (!_isCrouching)
-            _animator.Play("playerRun");
-
-        
-        if (_jump && _grounded)
-        {
-            _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            _grounded = false;
-            _jump = false;
-        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -59,6 +38,7 @@ public class playerScript : MonoBehaviour
         if (other.gameObject.CompareTag("ground"))
         {
             _grounded = true;
+            Debug.Log(_grounded);
         }
 
         else if (other.gameObject.CompareTag("obstacle"))
@@ -70,10 +50,10 @@ public class playerScript : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        
+
         if (other.gameObject.CompareTag("ground"))
         {
-            
+
             _grounded = false;
         }
     }
@@ -91,6 +71,27 @@ public class playerScript : MonoBehaviour
     public void ResetsPlayerPosition()
     {
         _rb.transform.position = new Vector2(transform.position.x, -2.19f);
+    }
+
+    private void keyboardInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.UpArrow) && _grounded)
+        {
+            _grounded = false;
+            _jump = false;
+            _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+        }
+
+         _isCrouching = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.Mouse1);
+        _animator.SetBool("isCrouching", _isCrouching);
+
+
+        if (!_grounded)
+            _animator.Play("playerJump");
+        else if (!_isCrouching)
+            _animator.Play("playerRun");
+
+
     }
 }
 
